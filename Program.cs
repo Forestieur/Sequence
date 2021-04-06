@@ -1,11 +1,13 @@
-﻿namespace Sequencee
+﻿using Sequencee.VIew;
+
+namespace Sequencee
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            ConsoleOutput output = new ConsoleOutput(99999999);
-            output.ShowNumbers();
+            ConsoleOutput output = new(9999999999);
+            output.ShowNumbers();                       
         }
     }
 }

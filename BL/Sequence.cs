@@ -1,8 +1,8 @@
-﻿namespace Sequencee
+﻿namespace Sequencee.BL
 {
     class Sequence 
     {
-        private double _number;
+        private readonly double _number;
         private double _maxNumber;
 
         public Sequence(double number)

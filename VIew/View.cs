@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace Sequencee
+namespace Sequencee.VIew
 {
     class View
     {
-        public void DisplayNumbers(double maxNumber)
+        public static void DisplayNumbers(double maxNumber)
         {
             for(double i = 1; i < maxNumber; i++)
             {               

@@ -1,9 +1,10 @@
-﻿namespace Sequencee
+﻿using Sequencee.BL;
+
+namespace Sequencee.VIew
 {
     class ConsoleOutput
     {
-        private Sequence _sequence;
-        private View _view;
+        private readonly Sequence _sequence;
 
         public  ConsoleOutput(double number)
         {
@@ -12,9 +13,8 @@
 
         public void ShowNumbers()
         {           
-            _view = new View();
             double maxNumber = _sequence.CountNumbers();
-            _view.DisplayNumbers(maxNumber);
+            View.DisplayNumbers(maxNumber);
 
         }
     }
