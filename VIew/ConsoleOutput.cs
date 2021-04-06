@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Sequencee.BL
+﻿namespace Sequencee
 {
     class ConsoleOutput
     {
@@ -16,7 +10,7 @@ namespace Sequencee.BL
             _sequence = new Sequence(number);
         }
 
-        public void StartBoard()
+        public void ShowNumbers()
         {           
             _view = new View();
             double maxNumber = _sequence.CountNumbers();

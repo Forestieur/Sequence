@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-
-
-namespace Sequencee.BL
+﻿namespace Sequencee
 {
-    
-
     class Sequence 
     {
         private double _number;
         private double _maxNumber;
+
         public Sequence(double number)
         {
             _number = number;
-            CountNumbers();
         }
 
         public double CountNumbers()
