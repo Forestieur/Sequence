@@ -3,51 +3,29 @@ using System.Collections.Generic;
 using System.Diagnostics;
 
 
-namespace Sequence.BL
+namespace Sequencee.BL
 {
     
 
-    class Sequence : ICount
+    class Sequence 
     {
         private double _number;
-        private long max_number;
-
+        private double _maxNumber;
         public Sequence(double number)
         {
             _number = number;
+            CountNumbers();
         }
 
-        public void CountArr(out long[] numbers)
+        public double CountNumbers()
         {
-            numbers = new long[(long)_number];
-
-            for (double i = 0; i * i < _number; i++)
+             _maxNumber = _number / 2;
+            double eps = 0.1;
+            while (_maxNumber - _number / _maxNumber > eps)
             {
-                 numbers[(int)i] = (int)i;
-
-            }           
-        }
-
-        public void CountList(out List<double> Numbers)
-        { 
-            Numbers = new List<double>();
-            for (int i = 0; i * i < _number; i++)
-            {
-                Numbers.Add(i);
+                _maxNumber = 0.5 * (_maxNumber + _number / _maxNumber);
             }
-        }
-
-        public void CountNumbers()
-        {
-           
-
-            
-
-          
-      
-
-
-
+            return _maxNumber;
         }
     }
 }
