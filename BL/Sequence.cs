@@ -1,6 +1,8 @@
-﻿namespace Sequencee.BL
+﻿using System;
+
+namespace Sequencee.BL
 {
-    class Sequence 
+    class Sequence : ISequence
     {
         private readonly double _number;
         private double _maxNumber;
@@ -12,13 +14,13 @@
 
         public double CountNumbers()
         {
-             _maxNumber = _number / 2;
+            _maxNumber = _number / 2;
             double eps = 0.1;
             while (_maxNumber - _number / _maxNumber > eps)
             {
                 _maxNumber = 0.5 * (_maxNumber + _number / _maxNumber);
             }
-            return _maxNumber;
+            return Math.Floor(_maxNumber);
         }
     }
 }

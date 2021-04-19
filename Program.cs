@@ -1,4 +1,5 @@
 ﻿using Sequencee.VIew;
+using Sequencee.BL;
 
 namespace Sequencee
 {
@@ -6,8 +7,9 @@ namespace Sequencee
     {
         static void Main()
         {
-            ConsoleOutput output = new(9999999999);
-            output.ShowNumbers();                       
+            ISequence sequence = new Sequence(0_999_999_999);
+            ConsoleOutput output = new(sequence);
+            output.ShowNumbers();                  
         }
     }
 }

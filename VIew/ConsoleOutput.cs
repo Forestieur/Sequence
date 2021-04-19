@@ -1,21 +1,23 @@
 ﻿using Sequencee.BL;
+using System;
 
 namespace Sequencee.VIew
 {
     class ConsoleOutput
     {
-        private readonly Sequence _sequence;
-
-        public  ConsoleOutput(double number)
-        {
-            _sequence = new Sequence(number);
+         private double maxNumber;
+        
+        public  ConsoleOutput(ISequence sequence)
+        {           
+            maxNumber = sequence.CountNumbers();
         }
 
         public void ShowNumbers()
         {           
-            double maxNumber = _sequence.CountNumbers();
-            View.DisplayNumbers(maxNumber);
-
+            for (double i = 1; i <= maxNumber; i++)
+            {
+                 Console.Write($"{i}, ");
+            }
         }
     }
 }
