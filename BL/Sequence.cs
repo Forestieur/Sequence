@@ -15,12 +15,12 @@ namespace Sequencee.BL
         public double CountNumbers()
         {
             _maxNumber = _number / 2;
-            double eps = 0.1;
+            double eps = 0.001;
             while (_maxNumber - _number / _maxNumber > eps)
             {
                 _maxNumber = 0.5 * (_maxNumber + _number / _maxNumber);
             }
-            return Math.Floor(_maxNumber);
+            return _maxNumber;
         }
     }
 }
